@@ -1,3 +1,13 @@
 site_name: CMZLoader Documentation
 theme:
   name: material
+
+markdown_extensions:
+  - codehilite:
+      linenums: true
+
+nav:
+  - Welcome: index.md
+  - Getting Started: gettingstarted.md
+  - Logging: logging.md
+  - Event System: eventsystem.md

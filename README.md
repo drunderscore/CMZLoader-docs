@@ -1,6 +1,6 @@
 # CMZLoader-docs
 
-You seem to be lost. Click [here](todo) to see the real docs.
+You seem to be lost. Click [here](https://cmzloader-docs.rtfd.io/) to see the real docs.
 
 ## FAQ
 
