@@ -1,5 +1,3 @@
-# Event System
-
 A majority of CMZLoader is based on events. Events are implemented and triggered
 by the loader itself, and can help tell your mod when a specific action occurs.
 Some of these events can be canceled, to prevent the original task from occuring,

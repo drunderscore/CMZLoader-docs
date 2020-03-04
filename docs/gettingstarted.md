@@ -1,5 +1,3 @@
-# Getting Started
-
 To begin, you need the following skills:
 
 - Knowledge of C# (or some other .NET language)
@@ -10,7 +8,7 @@ To begin, you need the following skills:
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)
 - [XNA 4.0 **Framework** Redistributable ](https://www.microsoft.com/en-us/download/confirmation.aspx?id=20914)
-- A copy of [CMZLoader binaries](https://content.jame.xyz/cmz/loader/release/CMZLoader-Latest.zip)
+- A copy of [CMZLoader binaries](/binaries)
 
 ## Creating & Preparing the Project
 
@@ -70,8 +68,32 @@ This alone is enough to have your mod shown in the mod list.
 
 _Example:_
 
-```c# hl_lines="3"
+```c#
 namespace CoolDocs {
+    public class CoolDocsMod : Mod {
+        // ...
+    }
+}
+```
+
+By default, mods are compatible with vanilla players, and aren't required on the
+host or connecting clients. However, some mods may have certain aspects that won't work without all
+clients having the mod. In these instances, it may be beneficial to mark your mod as **required**
+with the `ModRequiredAttribute`.
+
+Hosts that have a required mod will not accept clients that do not also have the mod. Likewise,
+clients with a required mod cannot join hosts who do not also have the mod. Those users will
+be disconnected with either a _"Mod missing on server"_ or _"Mod missing on client"_ connection error.
+
+Mods that add things such as items, blocks, custom biomes,
+or network messages, or change core game features, like damage or spawning, should always be marked
+as required.
+
+_Example:_
+
+```c# hl_lines="2"
+namespace CoolDocs {
+    [ModRequired]
     public class CoolDocsMod : Mod {
         // ...
     }

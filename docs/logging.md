@@ -1,5 +1,3 @@
-# Logging
-
 CMZLoader uses [NLog](https://nlog-project.org/) in order to log to file and the
 in-game developer console. It is highly versatile, and easily implementable to
 start logging out of the box.
@@ -14,14 +12,13 @@ problems.
 Also attached to the logging system is the developer console. Pressing tilde (~)
 at any time will bring up the developer console.
 
-All commands and convars should be initialized in an [InitializationEvent](/eventsystem).
+All commands and convars should be initialized in an `InitializationEvent`.
 
 ### Commands
 
 Commands are input into the console with a space afterwards, that can process
-the succeeding text, and execute ode based on it's input. You can use these to
-do an action for a specific player, give yourself an item name, or even set
-your health to that value.
+the succeeding text, and execute code based on it's input. These are useful some
+things the user may need once in a while.
 
 _Examples:_
 

@@ -8,6 +8,8 @@ markdown_extensions:
 
 nav:
   - Welcome: index.md
+  - Binaries: binaries.md
   - Getting Started: gettingstarted.md
   - Logging: logging.md
   - Event System: eventsystem.md
+  - Network Messages: networking.md
